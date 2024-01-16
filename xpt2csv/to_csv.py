@@ -1,8 +1,18 @@
-#!/usr/bin/env python.exe
+# This code is for converting xpt file to csv file
+# -----------------------------------------------------------------------------
+# Date                     Programmer
+# ----------   --------------------------------------------------------------
+# Jan-10-2024    Md Yousuf Ali (md.ali@fda.hhs.gov)
+#
+#
 import pathlib
 import pyreadstat
 
 def xpt_to_csv(xpt_path, where_to_save):
+    """
+    this code is for converting xpt file to csv file
+
+    """
 
     if pathlib.Path(xpt_path).is_file():
         df, meta = pyreadstat.read_xport(xpt_path)
