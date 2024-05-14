@@ -7,7 +7,11 @@
 #
 import pathlib
 import pyreadstat
+import click
 
+@click.command()
+@click.argument("xpt_path")
+@click.argument("where_to_save")
 def xpt_to_csv(xpt_path, where_to_save):
     """
     this code is for converting xpt file to csv file
@@ -42,24 +46,17 @@ def xpt_to_csv(xpt_path, where_to_save):
                     save_to = pathlib.Path(where_to_save, final_path, file_name)
                     df.to_csv(save_to)
                 except:
-                    print(i)
+                    # print(i)
+                    click.echo(i)
+
+if __name__=="__main__":
+    xpt_to_csv()
 
 
 
 
 
-# phuse_xpt = 'C:/Users/Md.Ali/OneDrive - FDA/yousuf/00_github_projects/phuse-scripts/data/send/CBER-POC-Pilot-Study2-Vaccine'
-# save_file = 'C:/Users/Md.Ali/OneDrive - FDA/yousuf/00_github_projects/xpt_convert/phuse_test'
 
 # xpt_to_csv(xpt_path= phuse_xpt, where_to_save= save_file )
 
 
-# did not worked
-#
-# p = 'C:/Users/Md.Ali/OneDrive - FDA/yousuf/00_github_projects/phuse-scripts/data/send/CBER-POC-Pilot-Study5/lb.xpt'
-# p= 'C:/Users/Md.Ali/OneDrive - FDA/yousuf/00_github_projects/phuse-scripts/data/send/FFU-Contribution-to-FDA/ts.xpt'
-# p = 'C:/Users/Md.Ali/OneDrive - FDA/yousuf/00_github_projects/phuse-scripts/data/send/instem/ex.xpt'
-# p = 'C:/Users/Md.Ali/OneDrive - FDA/yousuf/00_github_projects/phuse-scripts/data/send/instem/Xpt/ex.xpt'
-# p = 'C:/Users/Md.Ali/OneDrive - FDA/yousuf/00_github_projects/phuse-scripts/data/send/Nimble/TS.xpt'
-
-# df, meta = pyreadstat.read_xport(p, encoding= 'UTF8')
