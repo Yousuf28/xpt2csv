@@ -96,4 +96,5 @@ this will convert and save all xpt files in following directory structure
 ```
 
 
-project in [github](https://github.com/Yousuf28/xpt2csv)
+project in [github](https://github.com/Yousuf28/xpt2csv)  
+pypi [link](https://pypi.org/project/xpt2csv-cli/)
