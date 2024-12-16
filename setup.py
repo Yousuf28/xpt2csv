@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 setup(
     name='xpt2csv-cli',
     packages=find_packages(include= ['xpt2csv']),
-    version='0.1.3',
+    version='0.1.4',
     install_requires=['pyreadstat',
                       'click'],
     description='CLI app to convert xpt file to csv',

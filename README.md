@@ -95,6 +95,7 @@ this will convert and save all xpt files in following directory structure
             - tx.csv
 ```
 
+NOTE/warning: Metadata in xpt file will lost be when converting to csv.
 
 project in [github](https://github.com/Yousuf28/xpt2csv)  
 pypi [link](https://pypi.org/project/xpt2csv-cli/)
